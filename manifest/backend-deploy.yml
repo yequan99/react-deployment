@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react-backend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: react-backend
+  template:
+    metadata:
+      labels:
+        app: react-backend
+    spec:
+      containers:
+        - name: react-backend
+          image: localhost:5001/react-backend:latest
+          resources:
+            limits: 
+              memory: "128Mi"
+              cpu: "250m"

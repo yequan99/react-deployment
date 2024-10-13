@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: react-frontend
+spec:
+  type: LoadBalancer
+  selector:
+    app: react-frontend
+  ports:
+    - name: react-frontend
+      protocol: TCP
+      port: 3000
+      targetPort: 3000
