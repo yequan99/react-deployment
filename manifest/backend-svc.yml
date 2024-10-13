@@ -3,11 +3,10 @@ kind: Service
 metadata:
   name: react-backend
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: react-backend
   ports:
-    - name: react-backend
+    - port: 5050
       protocol: TCP
-      port: 5050
       targetPort: 5050

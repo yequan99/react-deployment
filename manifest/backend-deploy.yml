@@ -15,7 +15,5 @@ spec:
       containers:
         - name: react-backend
           image: localhost:5001/react-backend:latest
-          resources:
-            limits: 
-              memory: "128Mi"
-              cpu: "250m"
+          ports:
+            - containerPort: 5050
