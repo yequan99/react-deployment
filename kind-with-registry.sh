@@ -36,6 +36,12 @@ nodes:
   - containerPort: 443
     hostPort: 443
     protocol: TCP
+  - containerPort: 30335
+    hostPort: 30335
+    protocol: TCP
+  - containerPort: 30336
+    hostPort: 30336
+    protocol: TCP
 containerdConfigPatches:
 - |-
   [plugins."io.containerd.grpc.v1.cri".registry]

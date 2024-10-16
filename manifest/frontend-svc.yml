@@ -3,10 +3,11 @@ kind: Service
 metadata:
   name: react-frontend
 spec:
-  type: ClusterIP
+  type: NodePort
   selector:
     app: react-frontend
   ports:
-    - port: 3000
+    - port: 30335
       protocol: TCP
       targetPort: 3000
+      nodePort: 30335

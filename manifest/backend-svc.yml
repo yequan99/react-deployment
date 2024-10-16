@@ -3,10 +3,11 @@ kind: Service
 metadata:
   name: react-backend
 spec:
-  type: ClusterIP
+  type: NodePort
   selector:
     app: react-backend
   ports:
-    - port: 5050
+    - port: 30336
       protocol: TCP
       targetPort: 5050
+      nodePort: 30336

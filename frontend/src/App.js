@@ -6,8 +6,9 @@ function App() {
   const [data, setData] = useState('Loading...')
   const callAPI = async () => {
     try {
-      const res = await fetch('http://localhost:5050/')
+      const res = await fetch('http://react-backend.react.svc.cluster.local:30336/')
       const data = await res.json()
+      console.log("made get request: ", data)
       setData(data)
     } catch (error) {
       console.log('RESP1 error', error)

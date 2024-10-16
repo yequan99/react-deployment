@@ -10,7 +10,7 @@ app.use(express.json())
 
 app.get("/", (req,res) => {
     const message = `${os.hostname()}`
-    console.log(os)
+    console.log(os.hostname())
     res.json(message)
 })
 
