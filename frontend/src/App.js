@@ -6,7 +6,8 @@ function App() {
   const [data, setData] = useState('Loading...')
   const callAPI = async () => {
     try {
-      const res = await fetch('http://react-backend.react.svc.cluster.local:30336/')
+      const res = await fetch('react.127.0.0.1.nip.io')
+      console.log("response: ", res)
       const data = await res.json()
       console.log("made get request: ", data)
       setData(data)

@@ -2,25 +2,15 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: react-ingress
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+  namespace: react
 spec:
-  ingressClassName: nginx
   rules:
-    - host: localhost
+    - host: react.127.0.0.1.nip.io
       http:
         paths:
-          - path: /api
-            pathType: Prefix
+          - pathType: ImplementationSpecific
             backend:
               service:
                 name: react-backend
                 port:
                   number: 5050
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: react-frontend
-                port:
-                  number: 3000
