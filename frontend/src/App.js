@@ -6,7 +6,7 @@ function App() {
   const [data, setData] = useState('Loading...')
   const callAPI = async () => {
     try {
-      const res = await fetch('react.127.0.0.1.nip.io')
+      const res = await fetch('http://react-backend.127.0.0.1.nip.io')
       console.log("response: ", res)
       const data = await res.json()
       console.log("made get request: ", data)

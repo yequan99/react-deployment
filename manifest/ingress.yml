@@ -5,7 +5,7 @@ metadata:
   namespace: react
 spec:
   rules:
-    - host: react.127.0.0.1.nip.io
+    - host: react-backend.127.0.0.1.nip.io
       http:
         paths:
           - pathType: ImplementationSpecific
@@ -14,3 +14,12 @@ spec:
                 name: react-backend
                 port:
                   number: 5050
+    - host: react-frontend.127.0.0.1.nip.io
+      http:
+        paths:
+          - pathType: ImplementationSpecific
+            backend:
+              service:
+                name: react-frontend
+                port:
+                  number: 3000
